@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header section */
+.top-bar {
+    background: linear-gradient(to bottom, #222, #333);
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Navigation bar */
+.navigation-bar {
+    background: linear-gradient(to bottom, #e6e6e6, #d9d9d9);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 6px;
+    margin-right: 10px;
+}
+
+.nav-btn {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.1s ease;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(to bottom, #f5f5f5, #e9e9e9);
+}
+
+.url-bar {
+    flex-grow: 1;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.url-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.close-btn {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Main content section */
+.main-content {
+    background: linear-gradient(to bottom, #3b8ac4, #2c7cb6);
+    min-height: calc(100vh - 84px); /* Accounts for top bar and nav bar */
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Header with logo and weather */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.eyefind-logo {
+    position: relative;
+    font-size: 0; /* Hide any potential space between inline elements */
+}
+
+.eye-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.find-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #8cccf0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.info-text {
+    font-size: 24px;
+    color: #8cccf0;
+    position: relative;
+    top: 5px;
+    left: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.weather-info {
+    color: white;
+    text-align: right;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.weather-icon {
+    display: inline-block;
+    color: #ffcc00;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+/* Search section */
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-bar {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+    color: #3b8ac4;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #444;
+}
+
+.random-btn {
+    background-color: #0a7b93;
+    color: white;
+    border: none;
+    height: 45px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Navigation menu */
+.yellow-divider {
+    height: 4px;
+    background-color: #fecb00;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.category-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.category {
+    flex: 1;
+    padding: 12px 5px;
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    text-transform: uppercase;
+}
+
+.category:last-child {
+    border-right: none;
+}
+
+.category-icon {
+    font-size: 22px;
+    margin-right: 8px;
+    color: #3b8ac4;
+}
+
+/* Ads section */
+.ads-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.ad-box {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.ad-yellow-top {
+    height: 4px;
+    background-color: #fecb00;
+}
+
+.ad-header {
+    background-color: #047;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ad-content {
+    height: 150px;
+    background-color: #0088cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Link grid */
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    height: 80px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* Custom grid items styling */
+.dynasty {
+    background-color: #ffd700;
+    color: #333;
+}
+
+.warstock {
+    background-color: #333;
+    color: white;
+}
+
+.arena {
+    background-color: #111;
+    color: #ff3333;
+}
+
+.elitas {
+    background-color: #e0f0ff;
+    color: #0077cc;
+}
+
+.diamond {
+    background-color: #222;
+    color: white;
+}
+
+.uniform {
+    background-color: #f8f8f8;
+    color: #666;
+}
+
+.atheist {
+    background-color: #3399ff;
+    color: #ffcc00;
+}
+
+.lazer {
+    background-color: #9933cc;
+    color: white;
+}
+
+.cult {
+    background-color: #ff3355;
+    color: white;
+}
+
+.jack {
+    background-color: #333;
+    color: white;
+}
+
+/* Ad content custom styling */
+.ad-legendary {
+    background-color: #000;
+}
+
+.ad-legendary-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.2);
+}
+
+.ad-legendary-subtitle {
+    font-size: 16px;
+    color: #ff3333;
+}
+
+.ad-maze {
+    background-color: white;
+    color: #333;
+    position: relative;
+}
+
+.ad-maze-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ad-maze-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ad-maze-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+.ad-southern {
+    background-color: #3399ff;
+}
+
+.ad-southern-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff200;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .content-container {
+        padding: 0 15px;
+    }
+
+    .link-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ads-section {
+        flex-direction: column;
+    }
+
+    .category-nav {
+        flex-wrap: wrap;
+    }
+
+    .category {
+        flex: 0 0 33.33%;
+    }
+
+    .link-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-section {
+        flex-direction: column;
+    }
+
+    .weather-info {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .random-btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .category {
+        flex: 0 0 50%;
+    }
+
+    .link-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
